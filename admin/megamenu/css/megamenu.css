@@ -1,0 +1,736 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       CANVAS Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 ThemezArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       ThemezArt
+ *                & t3-framework.org as base version
+ * @Google group: https://groups.google.com/forum/#!forum/canvasfw
+ * @Link:         http://themezart.com/canvas-framework 
+ *------------------------------------------------------------------------------
+ */
+
+
+/* -------------------------------------------------*/
+/* CANVAS MEGAMENU ADMIN UI
+---------------------------------------------------*/
+
+body.bd {
+  padding: 0;
+  margin: 0;
+  background: url(../images/grid-bg.jpg) top left;
+}
+
+.bd .header {
+  padding: 10px 20px;
+}
+
+.bd .header h1 {
+  margin: 0;
+  color: #fff;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: normal;
+}
+
+#canvas-admin-megamenu {
+  min-height: 800px;
+  padding: 0 20px;
+  position: relative;
+}
+
+.admin-inline-toolbox h3 {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.bd .canvas-admin-header {
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #e6e6e6;
+  position: relative;
+}
+
+.canvas-admin-header .btn-toolbar {
+  margin: 15px 0;
+}
+
+
+/* Intro
+---------------------*/
+#canvas-admin-mm-intro {
+  float: left;
+  padding: 20px 200px 20px 20px;
+}
+
+#canvas-admin-mm-intro h3 {
+  margin-top: 0;
+}
+
+#canvas-admin-mm-intro p {
+  display: block;
+  color: #999999;
+  max-height: 50px;
+  overflow: hidden;
+}
+
+
+
+/* Toolbox
+---------------------*/
+#canvas-admin-mm-tb {
+  float: left;
+}
+
+#canvas-admin-megamenu .admin-inline-toolbox {
+  height: 128px;
+  border-bottom: 1px solid #e6e6e6;
+  margin: 0 -20px 20px;
+  background: #f2f2f2;
+}
+
+#canvas-admin-mm-tb .admin-toolbox {
+  height: 128px;
+  padding: 20px;
+  display: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+#canvas-admin-mm-tb .admin-toolbox h3 {
+  margin-top: 0;
+}
+
+#canvas-admin-mm-tb .admin-toolbox ul {
+  margin-right: 20px;
+  float: left;
+}
+
+#canvas-admin-mm-tb .admin-toolbox li > label {
+  font-size: 11px;
+  color: #999999;
+  display: inline-block;
+
+}
+
+#canvas-admin-mm-tb .btn [class^="icon-"],
+#canvas-admin-mm-tb .btn [class*=" icon-"] {
+  margin-right: 0;
+}
+
+
+/* Toolbox Actions ---- */
+.canvas-admin-mm-row .toolbox-actions-group {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.canvas-admin-mm-row .toolbox-actions-group button {
+}
+
+
+/* Fullscreen Toggle */
+#canvas-admin-megamenu .canvas-admin-tog-fullscreen {
+  display: none !important;
+  /*position: absolute;
+  right: 0;
+  top: -50px;*/
+}
+
+#canvas-admin-megamenu .toolbox-saveConfig {
+  display: none !important;
+}
+
+
+/* The Menu
+---------------------*/
+#canvas-admin-mm-container {
+  float: left;
+  transition: opacity .2s ease-out;
+  -o-transition: opacity .2s ease-out;
+  -moz-transition: opacity .2s ease-out;
+  -webkit-transition: opacity .2s ease-out;
+}
+
+
+/* Global Menu Inner padding ---*/
+.canvas-megamenu .mega-inner {
+  padding: 10px;
+}
+
+
+/* Menu Grid ---*/
+.canvas-megamenu .row-fluid + .row-fluid {
+  margin-top: 0;
+  border-top: 0;
+}
+
+.canvas-megamenu .row-fluid [class*="span"] {
+  border: 1px dotted #ccc;
+  border-radius: 0;
+  background: white;
+}
+
+
+/* The Nav ---*/
+.canvas-megamenu .span12.mega-col-nav .mega-inner,
+.canvas-megamenu .mega-group .span12.mega-col-nav .mega-inner {
+  padding: 10px;
+}
+
+.canvas-megamenu .nav > li {
+  margin-right: 20px;
+}
+
+.canvas-megamenu .nav > li > a,
+.canvas-megamenu .nav > li > span {
+  border: 1px solid #ccc;
+  padding: 7px 10px;
+  background: #f2f2f2;
+  font-weight: bold;
+  border-radius: 0;
+  display: block;
+}
+
+/* The caret */
+.canvas-megamenu .mega-nav .dropdown-submenu > a::after {
+  margin-right: -10px;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+  box-shadow: none;
+}
+
+
+/* Dropdown ---*/
+.canvas-megamenu .dropdown-menu::before,
+.canvas-megamenu .dropdown-menu::after {
+  display: none !important; /* Hide the Arrow */
+}
+
+.canvas-megamenu .dropdown-menu {
+  border: 1px solid #aaa;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 0;
+  min-width: 200px;
+  background: #f2f2f2;
+  box-shadow: 3px 3px 0 #e6e6e6;
+  z-index: 99;
+  /* Fixed overlap with the Joomla Toolbar */
+}
+
+.canvas-megamenu .dropdown-menu .dropdown-menu {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+.canvas-megamenu .dropdown-submenu.mega-align-right .dropdown-menu {
+  margin-left: 0;
+  margin-right: 11px;
+}
+
+.canvas-megamenu .mega-nav li {
+  margin-bottom: 5px;
+}
+
+.canvas-megamenu .mega-nav li:last-child {
+  margin-bottom: 0;
+}
+
+.canvas-megamenu .mega-nav li > a,
+.canvas-megamenu .mega-nav li > span {
+  padding: 5px 20px 5px 10px;
+  border: 1px dotted #ccc;
+  background: #fff;
+  border-radius: 0;
+  font-size: 12px;
+  color: #999;
+}
+
+
+/* The group ---*/
+.canvas-megamenu .mega-nav .mega-group-title,
+.canvas-megamenu .mega-nav .mega-group > .mega-group-title,
+.canvas-megamenu .dropdown-menu .mega-nav .mega-group > .mega-group-title {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 1px dotted #ccc;
+}
+
+.canvas-megamenu .mega-group-ct {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0 10px 0;
+  border-radius: 0;
+  background: #f2f2f2;
+}
+
+.canvas-megamenu .mega-group-ct > .row-fluid > [class*="span"] > .mega-inner {
+  padding: 10px;
+}
+
+
+/* Module in Menu ---*/
+.canvas-megamenu .canvas-module {
+  pointer-events: none;
+  cursor: default;
+  position: relative;
+  margin: 0;
+}
+
+.canvas-megamenu .canvas-module:after {
+  display: block;
+  position: absolute;
+  background: #eeeeee;
+  right: -10px;
+  bottom: -10px;
+  content: "Module";
+  width: 70px;
+  padding: 2px 0;
+  text-align: center;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #999;
+  border-radius: 0;
+  border: 1px solid #dddddd;
+  border-width: 1px 0 0 1px;
+}
+
+.canvas-megamenu .canvas-module .module-inner {
+  opacity: .3;
+  font-size: 12px;
+}
+
+.canvas-megamenu .canvas-module .module-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: normal;
+}
+
+.canvas-megamenu .canvas-module .module-ct {
+  overflow: hidden;
+  zoom: 1;
+}
+
+/* Reset List Style in Module */
+.canvas-megamenu .canvas-module ul,
+.canvas-megamenu .canvas-module .nav,
+.canvas-megamenu .dropdown-menu .nav {
+  margin: 0 0 0 15px;
+}
+.canvas-megamenu .canvas-module ul li,
+.canvas-megamenu .canvas-module .nav li,
+.canvas-megamenu .dropdown-menu .nav li {
+  list-style: disc;
+  display: list-item;
+  float: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.canvas-megamenu .canvas-module ul li a,
+.canvas-megamenu .canvas-module .nav li a,
+.canvas-megamenu .dropdown-menu .canvas-module li a {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  background: none;
+  font: inherit;
+  white-space: normal;
+}
+.canvas-megamenu .canvas-module ul li a:hover,
+.canvas-megamenu .canvas-module .nav li a:hover,
+.canvas-megamenu .dropdown-menu .canvas-module li a:hover,
+.canvas-megamenu .canvas-module ul li a:active,
+.canvas-megamenu .canvas-module .nav li a:active,
+.canvas-megamenu .dropdown-menu .canvas-module li a:active,
+.canvas-megamenu .canvas-module ul li a:focus,
+.canvas-megamenu .canvas-module .nav li a:focus,
+.canvas-megamenu .dropdown-menu .canvas-module li a:focus,
+.canvas-megamenu .canvas-module ul li a:visited,
+.canvas-megamenu .canvas-module .nav li a:visited,
+.canvas-megamenu .dropdown-menu .canvas-module li a:visited {
+  background: none;
+  color: inherit;
+  font: inherit;
+}
+
+
+.canvas-megamenu [class*="span"].hover .canvas-module:after,
+.canvas-megamenu [class*="span"].selected .canvas-module:after {
+  border-style: solid;
+  border-color: #07b;
+  background: #07b;
+  color: #fff;
+}
+
+/* Fix Form display problem in Modules */
+.canvas-megamenu .canvas-module .control-group {
+  margin-bottom: 5px;
+}
+
+.canvas-megamenu .canvas-module .controls {
+  margin-left: 3px;
+}
+
+
+/* Open Item ---*/
+.canvas-megamenu .nav > li.open > a,
+.canvas-megamenu .open > a,
+.canvas-megamenu .open > .mega-group-title {
+  background: #07b !important;
+  border-color: #07b !important;
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+.canvas-megamenu .open > .mega-group-title > a {
+  color: #fff !important;
+}
+
+.canvas-megamenu .nav > li.open > a > .caret,
+.canvas-megamenu .open > a > .caret {
+  border-top-color: #fff !important;
+}
+
+
+/* Hover Item ---*/
+.canvas-megamenu .nav-child.hover,
+.canvas-megamenu ul[class*="level"] > li > a.hover,
+.canvas-megamenu ul[class*="level"] > li > span.hover,
+.canvas-megamenu .row-fluid [class*="span"].hover {
+  border-style: solid !important;
+  border-color: #07b !important;
+}
+
+.canvas-megamenu ul[class*="level"] > li > a:hover,
+.canvas-megamenu ul[class*="level"] > li > a:focus,
+.canvas-megamenu ul[class*="level"] > li > a:active {
+  background: #fff!important;
+  color: #333 !important;
+  text-shadow: none !important;
+}
+
+
+.canvas-megamenu ul[class*="level"] > li > a:hover > .caret,
+.canvas-megamenu ul[class*="level"] > li > a:focus > .caret,
+.canvas-megamenu ul[class*="level"] > li > a:active > .caret {
+  border-top-color: #333 !important;
+}
+
+/* The caret */
+.canvas-megamenu .mega-nav li a.hover:after,
+.canvas-megamenu .mega-nav li a.selected:after {
+  border-left-color: #333333;
+}
+
+/* The seperator */
+.canvas-megamenu .mega-nav .divider .separator {
+  display: none;
+}
+
+/* The Icons */
+.canvas-megamenu .nav [class^="icon-"],
+.canvas-megamenu .nav [class*=" icon-"],
+.canvas-megamenu .nav .fa {
+  margin-right: 5px;
+}
+
+/* Selected Item ---*/
+.canvas-megamenu .selected {
+  border-style: solid !important;
+  border-color: #07b !important;
+}
+
+/* The caption ---*/
+.mega-caption {
+  color: #999;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+
+/* Fix for Joomla! Default Admin Template
+--------------------------------------------------*/
+#canvas-admin-megamenu .dropdown-menu a {
+  white-space: normal;
+}
+
+#canvas-admin-megamenu .row-fluid [class*="span"] {
+  margin-left: 2.12766%;
+}
+
+#canvas-admin-megamenu .row-fluid [class*="span"]:first-child {
+  margin-left: 0;
+}
+
+/* Fix right spacing for chzn chosen in Megamenu Admin UI */
+#canvas-admin-megamenu ul.chzn-results {
+  margin-right: 4px;
+  float: none;
+}
+
+.chzn-container-multi .chzn-choices {
+  padding: 1px 0;
+}
+
+/* Fix submenu auto open on hover */
+#canvas-admin-megamenu .dropdown-submenu:hover .dropdown-menu {
+  display: none;
+}
+
+#canvas-admin-megamenu .dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+
+/* Header Form Control ---*/ 
+.canvas-admin-header .control-group {
+  width: auto !important;
+  display: block;
+  float: left;
+  margin: 15px 20px 15px 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  min-height: 30px;
+}
+
+.canvas-admin-header .control-group.hide {
+  display: none;
+}
+
+.canvas-admin-header .control-label {
+  width: auto !important;
+  display: block;
+  float: left;
+  padding: 8px 0 0 0;
+}
+
+.canvas-admin-header .controls {
+  margin: 0 0 0 10px;
+  width: auto !important;
+  display: block;
+  float: left;
+  padding: 0;
+  background: none;
+}
+
+.canvas-admin-header .inputbox,
+.canvas-admin-header .input {
+  width: 250px;
+  font-weight: bold;
+}
+
+
+/* Ajax loader ---*/
+#canvas-admin-megamenu .ajaxloader {
+  width: 300px;
+  height: 20px;
+  position: absolute;
+  top: 130px;
+  left: -999em;
+  border-radius: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -webkit-transition: opacity 0.5s ease-out;
+}
+
+
+#canvas-admin-megamenu .progress {
+  border-radius: 0;
+}
+
+#canvas-admin-megamenu .ajaxloader .bar {
+  width: 0%;
+}
+
+#canvas-admin-megamenu.loading .ajaxloader {
+  left: 20px;
+  opacity: 1;
+}
+
+#canvas-admin-megamenu.loading .ajaxloader .bar {
+  width: 100%;
+}
+
+#canvas-admin-megamenu.loading #canvas-admin-mm-container {
+  opacity: 0;
+}
+
+/* Hidden */
+#canvas-admin-megamenu .hidden,
+#canvas-admin-megamenu .hide {
+  display: block;
+  visibility: visible;
+  opacity: 0.3;
+}
+
+/* Modal ---*/
+.ajax-message {
+  position: fixed;
+  top: -100px;
+  opacity: 0;
+  left: 50%;
+  z-index: 1050;
+  overflow: auto;
+  width: 400px;
+  margin-left: -200px;
+  background-color: #fff;
+  border-radius: 0;
+  
+  transition: all 2s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  -o-transition: all 2s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  -moz-transition: all 2s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  -webkit-transition: all 2s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+.ajax-message.in {
+  top: 50px;
+  opacity: 1;
+}
+
+#canvas-admin-megamenu-dlg {
+  font: 14px/20px sans-serif;
+  color: #666;
+  width: 450px;
+  margin: -200px 0 0 -225px;
+  border: 1px solid #333;
+  border-radius: 0;
+}
+
+#canvas-admin-megamenu-dlg.fade.in {
+  top: 50%;
+}
+
+.modal-open .modal .dropdown-menu {
+  z-index: 2050;
+}
+
+.modal-open .modal .dropdown.open {
+  *z-index: 2050;
+}
+
+.modal-open .modal .popover {
+  z-index: 2060;
+}
+
+.modal-open .modal .tooltip {
+  z-index: 2080;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+}
+
+.modal-backdrop.fade {
+  opacity: 0;
+}
+
+.modal-backdrop,
+.modal-backdrop.fade.in {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+/* Modal ---*/
+.modal {
+  font: 14px/20px sans-serif;
+  color: #666;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1060;
+  overflow: auto;
+  width: 350px;
+  margin: -200px 0 0 -150px;
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+
+}
+
+.modal.fade {
+  -webkit-transition: opacity .3s linear, top .3s ease-out;
+  -moz-transition: opacity .3s linear, top .3s ease-out;
+  -o-transition: opacity .3s linear, top .3s ease-out;
+  transition: opacity .3s linear, top .3s ease-out;
+  top: -25%;
+}
+
+.modal-header {
+  padding: 9px 15px 0;
+}
+
+.modal-header .close {
+  margin-top: 2px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  line-height: 30px;
+}
+
+.modal-body {
+  overflow-y: auto;
+  max-height: 400px;
+  padding: 15px;
+}
+
+.modal-form {
+  margin-bottom: 0;
+}
+
+.modal-footer {
+  padding: 14px 15px 15px;
+  margin-bottom: 0;
+  text-align: right;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  border-radius: 0;
+  box-shadow: inset 0 1px 0 #ffffff;
+  *zoom: 1;
+}
+
+.modal-footer:before,
+.modal-footer:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.modal-footer:after {
+  clear: both;
+}
+
+.modal-footer .btn + .btn {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}

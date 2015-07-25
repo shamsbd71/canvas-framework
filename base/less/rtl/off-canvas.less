@@ -1,0 +1,43 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       CANVAS Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 ThemezArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       ThemezArt
+ *                & t3-framework.org as base version
+ * @Link:         http://themezart.com/canvas-framework 
+ *------------------------------------------------------------------------------
+ */
+
+@media (max-width: @navbarCollapseWidth) {
+  .off-canvas {
+    body > * {
+      left: 0;
+      -webkit-transform: translateX(0%);
+      -moz-transform: translateX(0%);
+      -o-transform: translateX(0%);
+      transform: translateX(0%);
+    }
+    
+
+    #off-canvas-nav {
+      .canvas-mainnav {
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        transform: translateX(100%);
+
+      }
+    }
+  }
+
+  .off-canvas-enabled {
+    body > *{
+      -webkit-transform: translateX(-@CANVASOffCanvasWidth);
+      -moz-transform: translateX(-@CANVASOffCanvasWidth);
+      -o-transform: translateX(-@CANVASOffCanvasWidth);
+      transform: translateX(-@CANVASOffCanvasWidth);
+    }
+  }
+}

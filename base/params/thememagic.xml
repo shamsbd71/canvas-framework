@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+	<fields name="thememagic" addfieldpath="/plugins/system/canvas/includes/depend">
+		<fieldset name="grid_params" label="CANVAS_TM_GRID">
+			<!-- Grid -->
+			<field name="CANVASgridWidth1200" type="text" default="1200px" class="input-small canvastm-dimension" label="CANVAS_TM_VARS_SCFD_WIDE_WIDTH_LABEL" description="CANVAS_TM_VARS_SCFD_WIDE_WIDTH_DESC" />
+			<field name="gridGutterWidth1200" type="text" default="40px" class="input-small canvastm-dimension" label="CANVAS_TM_VARS_SCFD_WIDE_GUTTER_LABEL" description="CANVAS_TM_VARS_SCFD_WIDE_GUTTER_DESC" />
+
+			<field name="CANVASgridWidth" type="text" default="940px" class="input-small canvastm-dimension" label="CANVAS_TM_VARS_SCFD_NORMAL_WIDTH_LABEL" description="CANVAS_TM_VARS_SCFD_NORMAL_WIDTH_DESC" />
+			<field name="gridGutterWidth" type="text" default="40px" class="input-small canvastm-dimension" label="CANVAS_TM_VARS_SCFD_NORMAL_GUTTER_LABEL" description="CANVAS_TM_VARS_SCFD_NORMAL_GUTTER_DESC" />
+
+			<field name="CANVASgridWidth980" type="text" default="940px" class="input-small canvastm-dimension" label="CANVAS_TM_VARS_SCFD_XTABLET_WIDTH_LABEL" description="CANVAS_TM_VARS_SCFD_XTABLET_WIDTH_DESC" />
+			<field name="gridGutterWidth980" type="text" default="40px" class="input-small canvastm-dimension" label="CANVAS_TM_VARS_SCFD_XTABLET_GUTTER_LABEL" description="CANVAS_TM_VARS_SCFD_XTABLET_GUTTER_DESC" />
+
+			<field name="CANVASgridWidth768" type="text" default="740px" class="input-small canvastm-dimension" label="CANVAS_TM_VARS_SCFD_TABLET_WIDTH_LABEL" description="CANVAS_TM_VARS_SCFD_TABLET_WIDTH_DESC" />
+			<field name="gridGutterWidth768" type="text" default="20px" class="input-small canvastm-dimension" label="CANVAS_TM_VARS_SCFD_TABLET_GUTTER_LABEL" description="CANVAS_TM_VARS_SCFD_TABLET_GUTTER_DESC" />
+			<!-- End Grid -->
+		</fieldset>
+	</fields>
+</form>

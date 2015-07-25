@@ -1,0 +1,50 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       CANVAS Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 ThemezArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       ThemezArt
+ *                & t3-framework.org as base version
+ * @Link:         https://github.com/canvasframework/ 
+ *------------------------------------------------------------------------------
+*/
+@media (max-width: 767px) {
+  .canvas-megamenu .mega-inner {
+    padding: 10px 20px;
+  }
+  .canvas-megamenu .row-fluid,
+  .canvas-megamenu .mega-dropdown-menu,
+  .canvas-megamenu .row-fluid [class*="span"] {
+    width: 100% !important;
+    min-width: 100% !important;
+    left: 0 !important;
+    margin-left: 0 !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+  }
+  .canvas-megamenu .row-fluid + .row-fluid {
+    padding-top: 10px;
+    border-top: 1px solid #eeeeee;
+  }
+  .canvas-megamenu .hidden-collapse,
+  .canvas-megamenu .always-show .caret,
+  .canvas-megamenu .sub-hidden-collapse > .nav-child,
+  .canvas-megamenu .sub-hidden-collapse .caret,
+  .canvas-megamenu .sub-hidden-collapse > a:after,
+  .canvas-megamenu .always-show .dropdown-submenu > a:after {
+    display: none !important;
+  }
+  .canvas-megamenu .mega-caption {
+    display: none !important;
+  }
+  html[dir="rtl"] .canvas-megamenu .row-fluid,
+  html[dir="rtl"] .canvas-megamenu .mega-dropdown-menu,
+  html[dir="rtl"] .canvas-megamenu .row-fluid [class*="span"] {
+    right: 0 !important;
+    margin-right: 0 !important;
+  }
+}
